@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Lorem ipsum</title>
+    <style type="text/css">
+      .class1Lab {
+        color: yellow;
+        background-color: green;
+      }
+      .header-nav {
+        float: right;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      .header-nav ul li {
+        display: inline;
+        padding: 5px;
+        margin-left: 15px;
+        margin-top: 0px;
+        border: 2px solid black;
+      }
+
+      body {
+        background-image: url("https://i.imgur.com/aDyCvvs.png");
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position-x: center;
+        background-color: rgb(255, 255, 255);
+        /* background-color: rgb(240, 219, 79) ; */
+        background-size: 50%;
+        height: 100%;
+        font-family: sans-serif;
+        /* opacity: 0.5; */
+      }
+      img {
+        position: inherit;
+      }
+      main h1 {
+        text-align: center;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+
+      p {
+        font-size: 16pt;
+        text-align: center;
+        color: invert;
+      }
+
+      * {
+        padding: 0;
+      }
+      html,
+      body {
+        min-height: 100%;
+        height: 100%;
+      }
+      footer {
+        padding-top: 9px;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+        color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./img/logo.jpg"
+        alt=""
+        srcset=""
+        style="width: 200px; height: 120px"
+      />
+      <nav class="header-nav">
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>about</li>
+        </ul>
+        <hr />
+      </nav>
+    </header>
+    <main>
+      <h1 class="class1Lab">Lorem ipsum</h1>
+    </main>
+    <script type="text/javascript">
+      let questionNature = [
+        "name",
+        "age",
+        "favourite Drink",
+        "favourite Day of the week",
+      ];
+      let questions = [
+        "tell us your name dear ",
+        "tell me , how old you are ?",
+        "and Whats your favourite drink ?",
+        "your favourite day of the week is ?",
+      ];
+      let answers = [" ", " ", " ", " "];
+      //loop to get,set,log values & also Generate html content
+      for (let i = 0; i < questions.length; i++) {
+        answers[i] = prompt(questions[i]);
+        //  :(
+        let response = [
+          `its nice to meet you ${answers[0]} am a JS code & i will ask you another questions`,
+          `Wow, ${answers[1]} you are almost there :D `,
+          `${answers[2]} ,thats a nice taste `,
+          `book it in your calendar , ${answers[3]} its a Date :) `,
+        ];
+        //   :)
+        if (answers[i] != "" && answers[i] != "undefined") {
+          alert(response[i]);
+          // log the console about the nature of the question
+          console.log(
+            `asking the visitor :   ${questions[i]} , responded with : ${answers[i]}`
+          );
+          // write to the html portion of the page <p> with inline style
+          document.write(`<p style='
+                color: #${generateRandomClolorcode()};
+                background-color: #${generateRandomClolorcode()};'> ${
+            questions[i]
+          } , you answered ${answers[i]} 
+                </p>`);
+        }
+      }
+      alert(
+        `${answers[0]}, at this age | ${answers[1]} | do you smile every ${answers[3]} morning`
+      );
+      //  using math object to generate a random hex color code
+      function generateRandomClolorcode() {
+        return (randomColor = Math.floor(Math.random() * 16777215).toString(
+          16
+        ));
+      }
+      // almost DRY
+      //lab01b assignment.
+    </script>
+    <footer>Copyright Symbol &copyright 2021</footer>
+  </body>
+</html>
