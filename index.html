@@ -24,7 +24,7 @@
       }
 
       body {
-        background-image: url("https://i.imgur.com/aDyCvvs.png");
+        background-image: url('https://i.imgur.com/aDyCvvs.png');
         background-repeat: no-repeat;
         background-position-y: bottom;
         background-position-x: center;
@@ -40,7 +40,7 @@
       }
       main h1 {
         text-align: center;
-        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       }
 
       p {
@@ -91,18 +91,18 @@
     </main>
     <script type="text/javascript">
       let questionNature = [
-        "name",
-        "age",
-        "favourite Drink",
-        "favourite Day of the week",
+        'name',
+        'age',
+        'favourite Drink',
+        'favourite Day of the week',
       ];
       let questions = [
-        "tell us your name dear ",
-        "tell me , how old you are ?",
-        "and Whats your favourite drink ?",
-        "your favourite day of the week is ?",
+        'tell us your name dear ',
+        'tell me , how old you are ?',
+        'and Whats your favourite drink ?',
+        'your favourite day of the week is ?',
       ];
-      let answers = [" ", " ", " ", " "];
+      let answers = [' ', ' ', ' ', ' '];
       //loop to get,set,log values & also Generate html content
       for (let i = 0; i < questions.length; i++) {
         answers[i] = prompt(questions[i]);
@@ -114,7 +114,7 @@
           `book it in your calendar , ${answers[3]} its a Date :) `,
         ];
         //   :)
-        if (answers[i] != "" && answers[i] != "undefined") {
+        if (answers[i] != '' && answers[i] != 'undefined') {
           alert(response[i]);
           // log the console about the nature of the question
           console.log(
